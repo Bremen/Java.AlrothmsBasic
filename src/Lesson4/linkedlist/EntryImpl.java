@@ -1,8 +1,8 @@
-package Lesson4;
+package Lesson4.linkedlist;
 
 import java.util.Objects;
 
-public class EntryImpl<T> implements Entry<T>{
+public class EntryImpl<T> implements Entry<T> {
 
     private final T value;
     private Entry<T> next;

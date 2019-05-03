@@ -1,4 +1,4 @@
-package Lesson4;
+package Lesson4.linkedlist;
 
 public interface Entry <T>{
     T getValue();

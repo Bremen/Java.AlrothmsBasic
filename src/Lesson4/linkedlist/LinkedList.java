@@ -1,4 +1,4 @@
-package Lesson4;
+package Lesson4.linkedlist;
 
 public interface LinkedList<E> {
 
@@ -17,4 +17,6 @@ public interface LinkedList<E> {
     void display();
 
     E getFirstElement();
+
+    Entry<E> getFirst();
 }
