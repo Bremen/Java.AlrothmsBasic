@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class EntryImpl<T> implements Entry<T> {
 
-    private final T value;
+    private T value;
     private Entry<T> next;
 
     public EntryImpl(T value) {
@@ -42,5 +42,28 @@ public class EntryImpl<T> implements Entry<T> {
     @Override
     public int hashCode() {
         return Objects.hashCode(value);
+    }
+
+    @Override
+    public boolean hasNext() {
+        return !(value == null && next == null);
+    }
+
+    @Override
+    public T next() {
+        T currentValue = getValue();
+        System.out.println("from method next(): value - " + currentValue);
+
+        if (next != null){
+            next = next.getNext();
+            if (next != null) {
+                value = next.getValue();
+            }
+            else {
+                value = null;
+            }
+        }
+
+        return currentValue;
     }
 }

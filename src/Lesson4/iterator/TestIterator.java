@@ -56,6 +56,9 @@ public class TestIterator {
         linkedList.insert(1);
         linkedList.insert(2);
         linkedList.insert(3);
+        linkedList.insert(4);
+        linkedList.insert(5);
+        linkedList.insert(6);
 
         Entry<Integer> current = linkedList.getFirst();
         while ( current != null ) {
@@ -68,5 +71,21 @@ public class TestIterator {
 //        }
 
 
+        System.out.println("1:----------------------------");
+
+
+        Iterator<Integer> iterator_my = linkedList.iterator();
+        while ( iterator_my.hasNext() ) {
+            Integer next = iterator_my.next();
+            System.out.println(next);
+        }
+
+        System.out.println("2:----------------------------");
+
+        iterator_my = linkedList.iterator();
+        while ( iterator_my.hasNext() ) {
+            Integer next = iterator_my.next();
+            System.out.println(next);
+        }
     }
 }
