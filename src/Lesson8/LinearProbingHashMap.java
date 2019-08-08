@@ -64,12 +64,13 @@ public class LinearProbingHashMap<Key, Value> {
                 break;
             }
         }
+
         keys[i] = null;
         values[i] = null;
         size--;
 
         int j = i;
-        while (keys[j+1] != null && hash(keys[j+1]) == hash(key)) {
+        while (keys[(j + 1) % capacity] != null && hash(keys[(j + 1) % capacity]) == hash(key)) {
             j = (j + 1) % capacity;
         }
 

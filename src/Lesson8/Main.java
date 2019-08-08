@@ -35,19 +35,19 @@ public class Main {
 //        }
 
 
-        lhm.put(20,""+"test");
-        lhm.put(60,""+"test");
-        lhm.put(40,""+"test");
-        lhm.put(80,""+"test");
+        lhm.put(19,""+"test");
+        lhm.put(59,""+"test");
+        lhm.put(39,""+"test");
+        lhm.put(79,""+"test");
 
         System.out.println(lhm);
 
 
-        lhm.remove(20);
+        lhm.remove(19);
         System.out.println(lhm);
-        lhm.remove(80);
+        lhm.remove(79);
         System.out.println(lhm);
-        lhm.remove(60);
+        lhm.remove(59);
         System.out.println(lhm);
 
     }
